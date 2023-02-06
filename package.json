@@ -1,0 +1,22 @@
+{
+  "name": "singulart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DamlaBozkurt/Singulart.git"
+  },
+  "author": "Damla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamlaBozkurt/Singulart/issues"
+  },
+  "homepage": "https://github.com/DamlaBozkurt/Singulart#readme",
+  "devDependencies": {
+    "cypress": "^12.5.1"
+  }
+}
