@@ -72,3 +72,9 @@ Cypress.Commands.add('Paintings', (paintings) => {
         cy.get('input[type="checkbox"]').eq('1').click({force: true})
         cy.get('button[id="cta-step-1"]').click({force: true})
     })
+    Cypress.Commands.add('awards', (awards) => {
+        cy.get('img[src="https://d17h7hjnfv5s46.cloudfront.net/assets/build/images/logos/logo-colors-line-new-header-black-bg.49009f76.svg"]').click()
+        cy.get('a[href="/en/awards/results-2023"]').eq('0').click({force: true})
+        cy.get('a[class="ds-button awards-editorial-winner__editorial-cta"]').eq('0').click( {force: true})
+        cy.get('a[href="/en/artworks/ovidiu-kloska-framed-beautiful-strange-spontaneous-vibrating-lines-enigmatic-still-life-by-o-kloska-1783803"]').eq('0').click({force: true})
+    })
