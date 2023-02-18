@@ -45,9 +45,7 @@ Cypress.Commands.add('Paintings', (paintings) => {
         cy.get('button[data-carousel-thumb="1"]').click({force: true})
         
         cy.get('button[type="button"]').eq('21').click( {force: true})
-        //cy.get('input[type="email"]').eq('1').click({force: true}).type('rgs') //ALTTAKİLERİ YAZARSAM BU CALIŞMIYO
-        //cy.get('textarea[name="message"]').eq('0').click( {force: true}).type('fgdgdgd')
-        //cy.get('div[class="text-center"]').click({force: true})
+       
         cy.get('textarea[name="message"]').eq('1').click({force: true}).type('xv')
         cy.get('input[name="email"]').eq('1').click( {force: true}).type('xcvxcv')
         cy.get('button[type="submit"]').eq('4').click({force: true})
@@ -90,4 +88,21 @@ Cypress.Commands.add('Paintings', (paintings) => {
         cy.get('div[class="form-group"]')
         cy.get('select[id="generic_genericContactType"]').select("purchase").should('have.value', 'Im interested in purchasing a new piece')
     })
+        Cypress.Commands.add('giftCard', (giftCard) => {
+            cy.get('a[href="/en/giftcards"]').click({force: true})
+            cy.get('a[class="button primary step-2"]').click({force: true})
+            cy.get('input[type="date"]').click({force: true}).type('2023-03-04')
+            cy.get('input[name="giftcards[deliveryFullName]"]').click({force: true}).type('Dams')
+            cy.get('input[id="giftcards_recipientEmail"]').click({force: true}).type('xv')
+            cy.get('input[id="giftcards_deliveryLine1"]').click({force: true}).type('şsdöşsdl')
+            cy.get('input[id="giftcards_deliveryLine2"]').click({force: true}).type('xçxcvmx')
+            cy.get('input[id="giftcards_deliveryState"]').click({force: true}).type('kfkf')
+            cy.get('input[id="giftcards_deliveryCity"]').click({force: true}).type('fdgşdfl')
+            //cy.get('input[id="giftcards_deliveryZipcode"]').click({force: true}).type('sdfsd')
+            cy.get('a[class="button primary step-3"]').click({force: true})
+           // cy.get('input[id="giftcards_deliveryCountry"]').select('Argentina')
+            //cy.get('input[id="giftcards_deliveryCountry"]').should('have.value', 'AR').click({force: true})
+
+        })
+
        

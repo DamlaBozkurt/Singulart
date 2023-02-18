@@ -6,6 +6,7 @@ describe('template spec', () => {
     
       //cy.designFurniture()
       //cy.awards()
-      cy.Contact()
+      //cy.Contact()
+      cy.giftCard()
   })
 })
