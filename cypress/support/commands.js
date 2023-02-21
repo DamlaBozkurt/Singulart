@@ -104,5 +104,31 @@ Cypress.Commands.add('Paintings', (paintings) => {
             //cy.get('input[id="giftcards_deliveryCountry"]').should('have.value', 'AR').click({force: true})
 
         })
+        Cypress.Commands.add('Creators', (creators) => {
+            //cy.get('a[data-ga-c="menu_artworks"]').eq('0').should('contain', 'Artworks').trigger('mouseover')
+            cy.get('div[data-refresh="navigation-desktop-artworks"]').should('be.visible')
+            cy.get('li[data-target="#navigation-desktop-creators"]').eq('0').should('be.visible').click({force: true})
+            //CALISMADI
+        })
+        Cypress.Commands.add('trade', (trade) => {
+            cy.get('a[href="/en/trade"]').eq('3').click({force: true})
+            cy.get('button[type="button"]').eq('12').click({force: true})
+            cy.get('input[name="business_application[firstName]"]').click().type('john')
+            cy.get('input[name="business_application[email]"]').click().type('dnkvdn')
+            cy.get('input[name="business_application[companyName]"]').click().type('sdsdf')
+            cy.get('div[class="form-row trade-landing__form-row"]').eq('1')
+            cy.get('div[class="ts-control form-field form-select__button--desktop js-form-select-button-desktop"]').eq('0').click()
+            //cy.get('div[class="form-select__list-item js-form-select-list-item active"]').should('have.value', 'France (+33)').click()
+            cy.get('div[data-value="FR"]').click()
+            cy.get('div[class="ts-control form-field form-select__button--desktop js-form-select-button-desktop"]').eq(1).click({force: true})
+            cy.get('div[data-value="FR"]').eq('1').click({force: true})
+            cy.get('div[class="ts-control form-field form-select__button--desktop js-form-select-button-desktop"]').eq(3).click({force: true})
+            cy.get('div[data-value="11-50"]').eq('0').click({force: true})
+            cy.get('div[class="ts-control form-field form-select__button--desktop js-form-select-button-desktop"]').eq('4').click({force: true})
+            cy.get('div[data-value="residential"]').eq('0').click({force: true})
+            cy.get('button[type="submit"]').eq('2').click({force: true})
+        })
+
+        
 
        
