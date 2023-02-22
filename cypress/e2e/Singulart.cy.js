@@ -9,6 +9,7 @@ describe('template spec', () => {
       //cy.Contact()
       //cy.giftCard()
       //cy.Creators()
-      cy.trade()
+      //cy.trade()
+      cy.loginForCreators()
   })
 })

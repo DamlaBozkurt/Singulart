@@ -58,17 +58,19 @@ Cypress.Commands.add('Paintings', (paintings) => {
         cy.get('input[id="cart_info_firstName"]').click({force: true}).type('bob')
         //cy.get('div[class="input-element phone"]')
         //cy.get('div[class="phone-dual"]')
-        //cy.get('div[id="cart_info_phone"]').click({force: true})
+        cy.get('div[id="cart_info_phone"]').click({force: true})
+        cy.get('option[value="GB"]').contains('United Kingdom (+44)').click({force: true})
        
         //cy.get('select[id="cart_info_phone_country"]')
         //cy.get('div[class="form-inline"]')
         //cy.get('select[id="cart_info_phone_country"]').select('Italy').click({force: true})
         //cy.get('[value="IT"]').eq('1').click({force: true}) //.select('IT').should('have.value', 'IT')
         //cy.get('select[id="cart_info_phone_country"]').select('ES').eq('1').should('have.value', 'Spain (+34)')
-        cy.get('input[type="checkbox"]').eq('0').click( {force: true})
-        cy.get('input[type="password"]').eq('1').click({force: true}).type('dsd')
-        cy.get('input[type="checkbox"]').eq('1').click({force: true})
-        cy.get('button[id="cta-step-1"]').click({force: true})
+        
+        //cy.get('input[type="checkbox"]').eq('0').click( {force: true})
+        //cy.get('input[type="password"]').eq('1').click({force: true}).type('dsd')
+        //cy.get('input[type="checkbox"]').eq('1').click({force: true})
+        //cy.get('button[id="cta-step-1"]').click({force: true})
     })
     Cypress.Commands.add('awards', (awards) => {
         cy.get('img[src="https://d17h7hjnfv5s46.cloudfront.net/assets/build/images/logos/logo-colors-line-new-header-black-bg.49009f76.svg"]').click()
@@ -118,7 +120,6 @@ Cypress.Commands.add('Paintings', (paintings) => {
             cy.get('input[name="business_application[companyName]"]').click().type('sdsdf')
             cy.get('div[class="form-row trade-landing__form-row"]').eq('1')
             cy.get('div[class="ts-control form-field form-select__button--desktop js-form-select-button-desktop"]').eq('0').click()
-            //cy.get('div[class="form-select__list-item js-form-select-list-item active"]').should('have.value', 'France (+33)').click()
             cy.get('div[data-value="FR"]').click()
             cy.get('div[class="ts-control form-field form-select__button--desktop js-form-select-button-desktop"]').eq(1).click({force: true})
             cy.get('div[data-value="FR"]').eq('1').click({force: true})
@@ -128,7 +129,15 @@ Cypress.Commands.add('Paintings', (paintings) => {
             cy.get('div[data-value="residential"]').eq('0').click({force: true})
             cy.get('button[type="submit"]').eq('2').click({force: true})
         })
-
+            Cypress.Commands.add('loginForCreators', (Login) => {
+                cy.get('a[href="/my-singulart/account/login"]').click()
+                cy.get('input[id="username"]').click().type('sdfsd')
+                cy.get('input[id="password"]').click().type('sdsdsdsdfsd')
+                cy.get('button[id="submit"]').click()
+                cy.get('a[href="/my-singulart/account/forgot_password"]').click()
+                cy.get('input[id="email"]').click().type('34534')
+                cy.get('button[id="submit"]').click()
+            })
         
 
        
